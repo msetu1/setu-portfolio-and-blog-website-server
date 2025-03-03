@@ -22,7 +22,7 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
 
   if (error instanceof ZodError) {
     const basicError = handleZodError(error);
-    statusCode = basicError?.statusCode ?? 400; 
+    statusCode = basicError?.statusCode ?? 400;
     message = basicError?.message ?? 'Validation Error';
     errorSources = basicError?.errorSources ?? [
       { path: '', message: 'Validation error occurred' },
