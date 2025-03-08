@@ -1,13 +1,14 @@
 import { Router } from 'express';
 import { ProjectRoutes } from '../modules/projects/project.route';
+import { BlogRoutes } from '../modules/blogs/blog.route';
 
 const router = Router();
 
 const moduleRoutes = [
-  //   {
-  //     path: '/blogs',
-  //     route: blogRoutes,
-  //   },
+  {
+    path: '/blogs',
+    route: BlogRoutes,
+  },
   {
     path: '/projects',
     route: ProjectRoutes,
